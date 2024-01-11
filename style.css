@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --light-red: hsl(0, 100%, 67%);
+    --orange-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+    --Light-slate-blue: hsl(252, 100%, 67%);
+    --Ligh-troyal-blue-: hsl(241, 81%, 54%);
+    --Violet-blue: hsla(256, 72%, 46%, 1);
+    --Persian-blue: hsla(241, 72%, 46%, 0);
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+    --grotesk: 'Hanken Grotesk', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--White);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--grotesk);
+}
+
+main {
+    width: 700px;
+    display: flex;
+    max-width: 90%;
+    box-shadow: 15px 10px 20px 10px rgba(0, 0, 0, 0.04);
+    border-radius: 24px;
+
+}
+
+.rate {
+    width: 50%;
+    background-color: var(--Ligh-troyal-blue-);
+    background-image: linear-gradient(var(--Light-slate-blue), var(--Ligh-troyal-blue-));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 45px;
+    border-radius: 24px;
+}
+
+.rate h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--Light-lavender);
+}
+
+.rate-no {
+    display: grid;
+    place-items: center;
+    margin: 24px 0;
+    text-align: center;
+    background-image: linear-gradient(var(--Violet-blue), var(--Persian-blue));
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+}
+
+.rate-no h1 {
+    font-size: 58px;
+    font-weight: 800;
+    color: var(--White);
+}
+
+.rate-no span {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--Light-lavender);
+}
+
+.rate-content {
+    text-align: center;
+}
+
+.rate-content h2 {
+    font-size: 28px;
+    color: var(--White);
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.rate-content p {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--Light-lavender);
+}
+
+.results {
+    width: 50%;
+    padding: 40px 30px;
+}
+
+.results h3 {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--Dark-gray-blue);
+}
+
+.results ul {
+    margin: 20px 0 28px;
+    display: grid;
+    gap: 16px;
+}
+
+.results ul li {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.results ul li span:first-child {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.results ul li h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--Dark-gray-blue);
+}
+
+.results ul li h4 span {
+    color: var(--Dark-gray-blue);
+    opacity: 0.5;
+}
+
+.reaction {
+    background-color: hsla(0, 100%, 67%, 0.07);
+    color: var(--light-red);
+}
+
+.memory {
+    background-color: hsl(39, 100%, 56%, 0.07);
+    color: var(--orange-yellow);
+}
+
+.verbal {
+    background-color: hsl(166, 100%, 37%, 0.07);
+    color: var(--green-teal);
+}
+
+.visual {
+    background-color: hsl(234, 85%, 45%, 0.07);
+    color: var(--cobalt-blue);
+}
+
+.results button {
+    width: 100%;
+    border-radius: 28px;
+    padding: 12px 16px;
+    background-color: var(--Dark-gray-blue);
+    color: var(--White);
+    font-size: 18px;
+    font-weight: 700;
+    font-family: var(--grotesk);
+    border: none;
+    transition: 0.5s linear;
+    outline: none;
+}
+
+.results button:hover {
+    background-image: linear-gradient(var(--Light-slate-blue), var(--Ligh-troyal-blue-));
+
+}
+
+@media screen and (max-width: 650px){
+    main{
+        flex-direction: column;
+        max-width: 100%;
+        border-radius: 0 0 24px 24px;
+    }
+
+    .rate, .results{
+        width: 100%;
+    }
+
+    .rate{
+        border-radius: 0 0 24px 24px;
+    }
+
+    .rate h3 {
+        font-size: 16px;
+    }
+
+    .rate-no {
+        width: 140px;
+        height: 140px;
+    }
+
+    .rate-no h1 {
+        font-size: 45px;
+    }
+    
+    .rate-no span {
+        font-size: 14px;
+    }
+
+    .rate-content h2 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+    
+    .rate-content p {
+        font-size: 14px;
+    }
+
+    .results h3 {
+        font-size: 16px;
+    }
+
+    .results ul li span:first-child {
+        font-size: 14px;
+        }
+    
+    .results ul li h4 {
+        font-size: 14px;
+    }
+
+    .results button {
+        font-size: 14px;
+    }
+}
